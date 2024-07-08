@@ -4,11 +4,9 @@ Descripción:
 
 Actualización de sitio web creado como ecommerce de venta de aritos de plantas 
 
-- Navbar 
+- Administración de cuenta
 - Registro e inicio de sesion
 - Carrito 
-- Modalidad e pago 
-- 
+- Modalidad de pago 
 
 Autor, Lizzie Mercado
-# PF-MercadoJS
