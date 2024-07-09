@@ -1,4 +1,4 @@
-// Script para ocultar y mostrar elemento (fuera de login.js)
+//CODIGO NAVBAR
 const elementLi = document.querySelector('#ocultarTienda');
 
 function ocultarElemento() {

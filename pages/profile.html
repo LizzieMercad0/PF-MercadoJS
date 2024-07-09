@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../assets/image/contacto.png" type="image/x-icon">
+    <meta property="og:title" content="Contacta a brotecitos" />
+</head>
+
+<body>
+<!--Nav-->
+<header>
+    
+    <nav class="navbar navbar-expand-lg bg-primary modo-claro">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/namefavicon.ico" alt="Logo Brotecitos" width="100" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarOffcanvas" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Menú Brotecitos </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body justify-content-center">
+                        <ul class="navbar-nav nav nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li id="ocultarTienda" class="nav-item">
+                            <a class="nav-link" href="../pages/product.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacts.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <li class="nav-item dropdown">
+                        <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/image/usuario.png" alt="">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
+                            <a class="dropdown-item" href="./profile.html">Mi perfil</a>
+                            <a class="dropdown-item" href="#">Cerrar sesión</a>
+                        </div>
+                    </li>
+        </div>
+    </nav>
+</header>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

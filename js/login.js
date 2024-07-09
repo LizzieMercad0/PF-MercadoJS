@@ -1,6 +1,5 @@
 // CODIGO LOGIN.JS
 
-// CONF. FORMULARIO
 const loginForm = document.querySelector('#loginForm');
 loginForm.addEventListener('submit', (e) => {
   e.preventDefault(); // No refresco la pagina
@@ -26,7 +25,7 @@ loginForm.addEventListener('submit', (e) => {
     }).then(() => {
         localStorage.setItem('sesionIniciada', 'true') // Almaceno la información de sesión
 
-      window.location = '../index.html' // RedireccionO a index.html
+      window.location = '../index.html' // Redirigo al inicio
     })
 }
 })
