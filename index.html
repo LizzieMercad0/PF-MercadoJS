@@ -18,7 +18,6 @@
 <body>
 <!--Nav-->
 <header>
-    
     <nav class="navbar navbar-expand-lg bg-primary modo-claro">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
@@ -54,7 +53,9 @@
                             <img src="./assets/image/usuario.png" alt="">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
-                            <a class="dropdown-item" href="./pages/profile.html">Mi perfil</a>
+                            <a id="perfilOcultar" class="dropdown-item" href="./pages/profile.html">Información personal</a>
+                            <a id="pagosOcultar" class="dropdown-item" href="#"> Mis pagos </a>
+                            <a id="inicioOcultar" class="dropdown-item" href="./pages/login.html">Iniciar Sesion</a>
                             <a id="cierreSesion" class="dropdown-item" href="#">Cerrar sesión</a>
                         </div>
                     </li>
@@ -69,7 +70,7 @@
             <div class="col-md-6 sm-2">
                 <h1 class="pt-5">¡Deja que tu belleza brote!</h1>
                 <p>Sé única, elige aretes que reflejen tu personalidad y amor por la naturaleza</p>
-                <a href="./pages/signup.html" class="btn btn-secondary text-light">Registrarse</a>
+                <!-- <a href="./pages/signup.html" class="btn btn-secondary text-light">Registrarse</a> -->
             </div>
             <div id="carouselExampleSlidesOnly" class="col-md-6 sm-2 d-md-block carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -311,5 +312,6 @@
 <script src="/js/navbar.js"></script>
 <script src="./js/cierresesion.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

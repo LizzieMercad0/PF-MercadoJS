@@ -10,7 +10,7 @@ loginForm.addEventListener('submit', (e) => {
     const validUser = Users.find(user => user.email === email && user.password === password);
 
     if (!validUser) {
-    Swal.fire({
+    Swal.fire({     //llamar a SweetAlert2 desde el html
         title: 'Error',
         text: 'Usuario y/o contraseña incorrectos',
         icon: 'error',
@@ -23,7 +23,7 @@ loginForm.addEventListener('submit', (e) => {
         icon: 'success',
         confirmButtonText: 'Continuar',
     }).then(() => {
-        localStorage.setItem('sesionIniciada', 'true') // Almaceno la información de sesión
+        localStorage.setItem('sesionIniciada', 'true') // Almaceno la información
 
       window.location = '../index.html' // Redirigo al inicio
     })
