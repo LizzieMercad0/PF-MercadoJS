@@ -4,24 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Perfil</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="../assets/image/contacto.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/image/profile96.png" type="image/x-icon">
     <meta property="og:title" content="Contacta a brotecitos" />
 </head>
 
 <body>
-<!--Nav-->
-<header>
+<!------------------------- 👇 NAVBAR 👇 ------------------------------->
+<header> 
     <nav class="navbar navbar-expand-lg bg-primary modo-claro">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
                 <img src="../assets/image/namefavicon.ico" alt="Logo Brotecitos" width="100" height="100">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
                 <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarOffcanvas" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Menú Brotecitos </h5>
@@ -44,27 +42,86 @@
                     </ul>
                     </div>
                 </div>
-                <li class="nav-item dropdown">
-                        <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../assets/image/usuario.png" alt="">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
-                            <a id="perfilOcultar" class="dropdown-item" href="../pages/profile.html">Información personal</a>
-                            <a id="pagosOcultar" class="dropdown-item" href="#"> Mis pagos </a>
-                            <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html">Iniciar Sesion</a>
-                            <a id="cierreSesion" class="dropdown-item" href="#">Cerrar sesión</a>
-                        </div>
-                    </li>
+                <li class="nav dropdown"> <!-------  👇 CARRITO 👇 --------->
+                    <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../assets/image/carrito32x32.png" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
+                        <a class="dropdown-item" href="#"> ... </a>
+                        <a class="dropdown-item" href="#"> ... </a>
+                        <a class="dropdown-item" href="#">...</a>
+                    </div>
+                </li> <!-- -->
+                <li class="nav dropdown"> <!------- 👇 PERFIL 👇 --------->
+                    <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../assets/image/usuario.png" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
+                        <a id="perfilOcultar" class="dropdown-item" href="../pages/profile.html"> <img src="../assets/image/usuario24.png" alt="">Información personal</a>
+                        <a id="pagosOcultar" class="dropdown-item" href="#"> <img src="../assets/image/$24.png" alt=""> Mis pagos </a>
+                        <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html">Iniciar Sesion</a>
+                        <a id="cierreSesion" class="dropdown-item" href="#"><img src="../assets/image/salida24.png" alt=""> Cerrar sesión</a>
+                    </div>
+                </li> <!-- -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
 </header>
+<!------------------------- 👆 NAVBAR 👆 ------------------------------->
 <main>
-    <div class="text-center  p-5">
-        <h5>Más de nuestros</h5>
-        <h6>Productos</h6>
+    <div class="d-flex p-5">
+        <ul class="nav nav-tabs flex-column me-10">
+                <li class="nav-item ">
+                    <a class="nav-link active" aria-current="page" href="./profile.html"> <img src="/assets/image/usuario-32.png" alt="" style="margin-right: 5px;">Informacion de Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <img src="../assets/image/segury32.png" alt="" style="margin-right: 5px;"> Inicio de sesion y seguridad </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> <img src="../assets/image/pagos32.png" alt="" style="margin-right: 5px;">Mis pagos</a>
+                </li>
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Infomación de la cuenta</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="displayName">Nombre a mostrar </label>
+                        <input type="text" class="form-control" id="displayName" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="realName">Nombre real </label>
+                        <input type="text" class="form-control" id="realName" placeholder="Ingrese su nombre real">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Ingrese su número">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="address">Dirección</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Ingrese su dirección"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-2">Actualizar</button>
+                    <button type="button" class="btn btn-secondary mt-2">Borrar todo</button>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
-<!-- Footer -->
+<!------------------------- 👇 FOOTER 👇 ------------------------------->
 <footer class="footer bg-primary">
     <nav class= "row mx-auto p-5" >
         <div class="col-md-3" >
@@ -72,9 +129,9 @@
             <p class="p_footer">abcdefgh@gmail.com</p>
             <p class="p_footer">+1-2345-6789</p>
             <p class="p_footer">123 Ave, Córdoba, Argentina</p>
-            <img src="./assets/image/instagram.png" alt="Enlace a intagram">
-            <img src="./assets/image/facebook.png" alt="Enlace a facebook">
-            <img src="./assets/image/x.png" alt="Enlace a X">
+            <img src="../assets/image/instagram.png" alt="Enlace a intagram">
+            <img src="../assets/image/facebook.png" alt="Enlace a facebook">
+            <img src="../assets/image/x.png" alt="Enlace a X">
         </div>
         <div class="col-md-3">
             <h5>Productos</h5>
@@ -98,9 +155,10 @@
         </div>
     </nav>
 </footer>
-<!--  -->
+<!------------------------- 👆 FOOTER 👆 ------------------------------->
 <script src="../js/navbar.js"></script>
 <script src="../js/cierresesion.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

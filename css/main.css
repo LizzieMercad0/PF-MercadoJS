@@ -11998,7 +11998,7 @@ textarea.form-control-lg {
 .card {
   margin: 0 0.5em;
   width: 250px;
-  height: auto;
+  height: 340px;
   border: 2px solid #F4F5F6;
   border-radius: 15px;
   transition: all 0.3s;

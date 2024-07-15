@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../assets/image/tienda96.png" type="image/x-icon">
+    <meta property="og:title" content="Carrito" />
+</head>
+<body>
+    <!------------------------- 👇 NAVBAR 👇 ------------------------------->
+<header>
+    <nav class="navbar navbar-expand-lg bg-primary modo-claro">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/namefavicon.ico" alt="Logo Brotecitos" width="100" height="100">
+            </a>
+            
+                <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarOffcanvas" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Menú Brotecitos </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body justify-content-center">
+                        <ul class="navbar-nav nav nav-underline">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li id="ocultarTienda" class="nav-item">
+                                <a class="nav-link " href="../pages/product.html">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="../pages/contacts.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Acerca de</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <li class="nav dropdown"> <!------- 👇 CARRITO 👇--------->
+                    <a class="nav-link boton-carrito" href="../pages/cart.html" id="messageDropdown" role="button" aria-expanded="false">
+                        <button type="button" class="btn btn-primary position-relative">
+                            <img src="../assets/image/carrito32x32.png" alt="Carrito de compras">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                            0
+                        </span>
+                        </button>
+                    </a>
+                </li> <!-- -->
+                <li class="nav dropdown"> <!-------👇 PERFIL 👇--------->
+                    <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../assets/image/usuario.png" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
+                        <a id="perfilOcultar" class="dropdown-item" href="../pages/profile.html"> <img src="../assets/image/usuario24.png" alt="">Información personal</a>
+                        <a id="pagosOcultar" class="dropdown-item" href="#"> <img src="../assets/image/$24.png" alt=""> Mis pagos </a>
+                        <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html"> <img src="../assets/image/inicio24.png" alt=""> Iniciar sesion</a>
+                        <a id="cierreSesion" class="dropdown-item" href="#"> <img src="../assets/image/salida24.png" alt="">Cerrar sesión</a>
+                    </div>
+                </li> <!-- -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<!------------------------- 👆 NAVBAR 👆 ------------------------------->
+<!-------------------- 👇 DETALLE CARRITO 👇 --------------------------->
+<main>
+    <h4 class="p-5">Carrito de compras</h4>
+    <div class="container contenedor-carrito">
+        <p class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+        <div class="carrito-productos disabled">
+            <!-- Se completa con el JS -->
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Productos</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="table-productos">Mark</td>
+                    <td class="table-cantidad">Otto</td>
+                    <td class="table-price">@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row mx-2">
+            <div class="col justify-content-end">
+                <p class="itemCartTotal">Total: $0</p>
+            </div>
+            <div class="col d-flex justify-content-end ">
+                <button class="btn btn-primary">COMPRAR</button>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+    </div>
+</main>
+<!-------------------- 👆 DETALLE CARRITO 👆 --------------------------->
+<!------------------------- 👇 FOOTER 👇 ------------------------------->
+<footer class="footer bg-primary">
+    <nav class= "row mx-auto p-5" >
+        <div class="col-md-3" >
+            <h5>Contactos</h5>
+            <p class="p_footer">abcdefgh@gmail.com</p>
+            <p class="p_footer">+1-2345-6789</p>
+            <p class="p_footer">123 Ave, Córdoba, Argentina</p>
+            <img src="../assets/image/instagram.png" alt="Enlace a intagram">
+            <img src="../assets/image/facebook.png" alt="Enlace a facebook">
+            <img src="../assets/image/x.png" alt="Enlace a X">
+        </div>
+        <div class="col-md-3">
+            <h5>Productos</h5>
+            <p class="p_footer">Suculentas</p>
+            <p class="p_footer">Monsteras</p>
+            <p class="p_footer">Pothus</p>
+            <p class="p_footer">Rosario</p>
+            <p class="p_footer">Cactus</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Acerca de...</h5>
+            <p class="p_footer">Información de la empresa</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Soporte</h5>
+            <p class="p_footer">Chat en linea</p>
+        </div>
+        <div class="footer__copyright">
+        <hr class="footer__line">
+        <p class="text-center">Todos los derechos reservados &copy <strong class="footer_name">Lizzie Mercado</strong></p>
+        </div>
+    </nav>
+</footer>
+<!------------------------- 👆 FOOTER 👆 ------------------------------->
+<script src="../js/cart.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/cierresesion.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

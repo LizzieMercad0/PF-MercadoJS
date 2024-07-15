@@ -6,19 +6,18 @@
     <title>Tienda</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="../assets/image/tienda.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/image/tienda96.png" type="image/x-icon">
     <meta property="og:title" content="Tienda Online" />
 </head>
 <body>
+<!------------------------- 👇 NAVBAR 👇 ------------------------------->
     <header>
         <nav class="navbar navbar-expand-lg bg-primary modo-claro">
             <div class="container">
                 <a class="navbar-brand" href="../index.html">
                     <img src="../assets/image/namefavicon.ico" alt="Logo Brotecitos" width="100" height="100">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                
                     <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarOffcanvas" aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Menú Brotecitos </h5>
@@ -41,35 +40,49 @@
                         </ul>
                         </div>
                     </div>
-                    <li class="nav-item dropdown">
-                            <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/image/usuario.png" alt="">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
-                                <a id="perfilOcultar" class="dropdown-item" href="../pages/profile.html">Información personal</a>
-                                <a id="pagosOcultar" class="dropdown-item" href="#"> Mis pagos </a>
-                                <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html">Iniciar Sesion</a>
-                                <a id="cierreSesion" class="dropdown-item" href="#">Cerrar sesión</a>
-                            </div>
-                        </li>
+                    <li class="nav dropdown"> <!------- 👇 CARRITO 👇--------->
+                        <a class="nav-link boton-carrito" href="../pages/cart.html" id="messageDropdown" role="button" aria-expanded="false">
+                            <button type="button" class="btn btn-primary position-relative">
+                                <img src="../assets/image/carrito32x32.png" alt="Carrito de compras">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                0
+                            </span>
+                            </button>
+                        </a>
+                    </li> <!-- -->
+                    <li class="nav dropdown"> <!------- 👇 PERFIL 👇 --------->
+                        <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/image/usuario.png" alt="">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
+                            <a id="perfilOcultar" class="dropdown-item" href="../pages/profile.html"> <img src="../assets/image/usuario24.png" alt="">Información personal</a>
+                            <a id="pagosOcultar" class="dropdown-item" href="#"> <img src="../assets/image/$24.png" alt=""> Mis pagos </a>
+                            <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html">Iniciar Sesion</a>
+                            <a id="cierreSesion" class="dropdown-item" href="#"><img src="../assets/image/salida24.png" alt=""> Cerrar sesión</a>
+                        </div>
+                    </li> <!-- -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
     </header>
-    <main>
-<!--- Recomendaciones--->
-        <h4 class="p-5"> Recomendaciones </h4>
-        <section class="container">
-            <div class="row">
-                <div class="col-lg-3 mb-2 mb-sm-0 p-2 md-3">
+<!------------------------- 👆 NAVBAR 👆 ------------------------------->
+<main>
+<!------------------------- 👇 RECOMENDACIONES 👇 ------------------------------->
+        <h4 class="p-5 titulo-principal"> Recomendaciones </h4>
+        <section class="container contenedor-productos">
+            <div class="row ">
+                <div class="col-lg-3 mb-2 mb-sm-0 p-2 md-3 producto">
                     <div class="card mx-auto" style="width: 230px; height: 330px;">
-                        <img src="../assets/image/cactus_producto.png" class="card-img-top p-2" alt="..." style="height: 160px; width: 230px;">
-                    <div class="card-body">
+                        <img class="producto-image" src="../assets/image/cactus_producto.png" class="card-img-top p-2" alt="..." style="height: 160px; width: 230px;">
+                    <div class="card-body producto-detalles">
                         <div class="d-flex justify-content-between">
-                            <h5>Margaritas</h5>
-                            <span class="badge bg-primary text-dark pt-2">$0.00</span>
+                            <h5 class="producto-titulo" >Margaritas</h5>
+                            <span class="badge bg-primary text-dark pt-2 producto-precio">$0.00</span>
                         </div>  
                         <p class="card-text">Símbolo de resistencia y persistencia.</p>
-                        <a href="#" class="btn btn-primary">Comprar ahora</a>
+                        <a href="#" class="btn btn-primary producto-agregar">Agregar al carrito</a>
                     </div>
                     </div>
                 </div>
@@ -115,6 +128,7 @@
             </div>
             </div>        
         </section>
+<!------------------------- 👆 RECOMENDACIONES 👆 ------------------------------->
 
 <!---Todo los productos --->
         <h4 class="p-5"> Todos los productos</h4>
@@ -320,7 +334,10 @@
 </footer>
 <!--  -->
 <script src="../js/navbar.js"></script>
+<script src="../js/productos.js"></script>
+<script src="../js/productos.json"></script>
 <script src="../js/cierresesion.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
