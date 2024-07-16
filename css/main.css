@@ -11975,10 +11975,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.modo-osuro {
-  background-color: #55575e;
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
+@media screen and (max-width: 850px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 675px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+  }
+}
 @media (min-width: 768px) {
   .card img {
     height: 11em;
@@ -12005,7 +12017,7 @@ textarea.form-control-lg {
 }
 
 .card:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .fondo {

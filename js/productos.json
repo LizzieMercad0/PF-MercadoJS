@@ -3,6 +3,7 @@
         "id": "monstera-01",
         "titulo": "Monstera",
         "imagen": "../assets/image/bosque/monstera-producto-01.png",
+        "detalle": "...",
         "categoria": {
             "nombre": "Bosque",
             "id": "bosque"
@@ -24,7 +25,7 @@
         "titulo": "Cactus con flores",
         "imagen": "../assets/image/desierto/cactus-producto-01.png",
         "categoria": {
-            "nombre": "desierto",
+            "nombre": "Desierto",
             "id": "desierto"
         },
         "precio": 0.00
@@ -34,7 +35,7 @@
         "titulo": "Cactus mini",
         "imagen": "../assets/image/desierto/cactus-producto-02.png",
         "categoria": {
-            "nombre": "desierto",
+            "nombre": "Desierto",
             "id": "desierto"
         },
         "precio": 0.00
@@ -44,7 +45,7 @@
         "titulo": "Rosario",
         "imagen": "../assets/image/desierto/rosario-producto-01.png",
         "categoria": {
-            "nombre": "desierto",
+            "nombre": "Desierto",
             "id": "desierto"
         },
         "precio": 0.00
@@ -54,7 +55,7 @@
         "titulo": "Girasoles",
         "imagen": "../assets/image/silvestre/girasoles-producto-01.png",
         "categoria": {
-            "nombre": "silvestre",
+            "nombre": "Silvestre",
             "id": "silvestre"
         },
         "precio": 0.00
