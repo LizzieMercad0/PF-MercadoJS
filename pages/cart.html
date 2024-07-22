@@ -41,16 +41,6 @@
                         </ul>
                     </div>
                 </div>
-                <li class="nav dropdown"> <!------- 👇 CARRITO 👇--------->
-                    <a class="nav-link boton-carrito" href="../pages/cart.html" id="messageDropdown" role="button" aria-expanded="false">
-                        <button type="button" class="btn btn-primary position-relative">
-                            <img src="../assets/image/carrito32x32.png" alt="Carrito de compras">
-                        <span id="numerito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                            0
-                        </span>
-                        </button>
-                    </a>
-                </li> <!-- -->
                 <li class="nav dropdown"> <!-------👇 PERFIL 👇--------->
                     <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/image/usuario.png" alt="">
@@ -71,52 +61,43 @@
 <!------------------------- 👆 NAVBAR 👆 ------------------------------->
 <!-------------------- 👇 DETALLE CARRITO 👇 --------------------------->
 <main>
-    <h4 class="p-5">Carrito de compras</h4>
+    <h4 class="p-5 container">Carrito de compras</h4>
+    
     <div class="container contenedor-carrito">
-        <p class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
-        <div class="carrito-productos disabled">
-            <!-- Se completa con el JS -->
-        </div>
-        <table class="table">
+        <p id="carrito-vacio" class="carrito-vacio"> 
+            Tu carrito está vacío. <i class="bi bi-emoji-frown"></i>
+        </p>
+        
+        <table class="table disabled">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Productos</th>
+                    <th scope="col-sm-2">00000</th>
+                    <th scope="col">Producto</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precio</th>
+                    <th scope="col">Subtotal</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="table-productos">Mark</td>
-                    <td class="table-cantidad">Otto</td>
-                    <td class="table-price">@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
         </table>
-        <div class="row mx-2">
-            <div class="col justify-content-end">
-                <p class="itemCartTotal">Total: $0</p>
+            <div class="carrito-productos" id="carrito-productos" class="carrito-producto">
+                <!-- Esto se completara con JS -->
             </div>
-            <div class="col d-flex justify-content-end ">
-                <button class="btn btn-primary">COMPRAR</button>
+        
+
+        <div class="row mx-2" id="carrito-acciones" class="carrito-acciones disabled">
+            <div class="col justify-content-end carrito-acciones-izquierda">
+                <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar btn btn-danger"> Vaciar carrito </button> 
+                <!-- class="itemCartTotal">Total: $0 -->
             </div>
-          </div>
-          
-          </div>
+            <div class="col d-flex justify-content-end carrito-acciones-derecha">
+                <div class="carrito-acciones-total">
+                    <p>Total:
+                    </p><p id="total">$3000</p>
+                </div>
+                <button id="carrito-acciones-comprar" class="carrito-acciones-comprar btn btn-primary">Comprar ahora</button>
+            </div>
         </div>
+        <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
     </div>
 </main>
 <!-------------------- 👆 DETALLE CARRITO 👆 --------------------------->
@@ -156,8 +137,6 @@
 </footer>
 <!------------------------- 👆 FOOTER 👆 ------------------------------->
 <script src="../js/cart.js"></script>
-<script src="../js/productos.js"></script>
-<script src="../js/navbar.js"></script>
 <script src="../js/cierresesion.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

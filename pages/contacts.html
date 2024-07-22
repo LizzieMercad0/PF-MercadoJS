@@ -14,7 +14,7 @@
 <!--Nav-->
 <header>
     <nav class="navbar navbar-expand-lg bg-primary modo-claro">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="../index.html">
                 <img src="../assets/image/namefavicon.ico" alt="Logo Brotecitos" width="100" height="100">
             </a>
@@ -41,15 +41,15 @@
                     </ul>
                     </div>
                 </div>
-                <li class="nav dropdown"> <!-------👇 CARRITO 👇--------->
-                    <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../assets/image/carrito32x32.png" alt="">
+                <li class="nav dropdown" id="ocultarCarrito"> <!------- 👇 CARRITO 👇--------->
+                    <a class="nav-link boton-carrito" href="../pages/cart.html" id="messageDropdown" role="button" aria-expanded="false">
+                        <button type="button" class="btn btn-primary position-relative">
+                            <img src="../assets/image/carrito32x32.png" alt="Carrito de compras">
+                        <span id="numerito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                            0
+                        </span>
+                        </button>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
-                        <a class="dropdown-item" href="#"> ... </a>
-                        <a class="dropdown-item" href="#"> ... </a>
-                        <a class="dropdown-item" href="#">...</a>
-                    </div>
                 </li> <!-- -->
                 <li class="nav dropdown"> <!-------👇  PERFIL 👇--------->
                     <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -73,7 +73,7 @@
 <!-- Formulario -->
     <main>
         <section class="row p-5">
-            <div class="col-md-6">
+            <div class="col-md-6 container">
                 <h1> ¡Contáctanos!</h1>
                 <p>¿Tienes alguna pregunta o comentario? No dudes en contactarnos. Estaremos encantados de atenderte.</p>
                 <select class="form-select" aria-label="Default select example">

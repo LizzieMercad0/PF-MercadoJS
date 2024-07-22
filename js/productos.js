@@ -1,10 +1,10 @@
-let productos = [];
+let productos = []
 
 fetch("../js/productos.json")
     .then(response => response.json())
     .then(data => {
         productos = data;
-        cargarProductos(productos);
+        cargarProductos(productos)
     })
 
 const contenedorProductos  = document.querySelector (".contenedor-productos")
@@ -13,9 +13,14 @@ const tituloPrincipal = document.querySelector ("#titulo-principal")
 let botonesAgregar = document.querySelectorAll (".producto-agregar")
 const numerito = document.querySelector("#numerito")
 
+
+botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
+    aside.classList.remove("aside-visible");
+}))
+
 function cargarProductos(productosElegidos){
 
-    contenedorProductos.innerHTML=""
+    contenedorProductos.innerHTML = ""
 
     productosElegidos.forEach(producto => {
 
@@ -40,6 +45,8 @@ function cargarProductos(productosElegidos){
 }
 
 cargarProductos(productos)
+
+// 👇 Con esta configuración filtramos los productos por categoria 👇
 
 botonesCategorias.forEach(boton =>{
     boton.addEventListener("click",(e) =>{
@@ -69,15 +76,23 @@ function actualizarBotonesAgregar(){
     })
 } 
 
-const productosEnCarrito = []
+let productosEnCarrito;
+const productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumerito();
+} else {
+    productosEnCarrito = [];
+}
 
 function agregarAlCarrito(e) {
     
     const idBoton = e.currentTarget.id
     const productoAgregado = productos.find(producto => producto.id === idBoton)
 
-    if (productosEnCarrito.some(producto => producto.id === idBoton)){
-        const index = productosEnCarrito.findIndex(producto.id === idBoton)
+    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton)
         productosEnCarrito[index].cantidad++
     } else {
         productoAgregado.cantidad = 1

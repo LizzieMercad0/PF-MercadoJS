@@ -10,7 +10,7 @@ signupForm.addEventListener('submit', (e)=>{
     const Users = JSON.parse(localStorage.getItem("users")) || []
     const isUserRegistered = Users.find(user => user.email === email)
 
-    if (isUserRegistered){
+    if (isUserRegistered){ //Creo un alerta utilizando libreria de SweatAlert2
         return Swal.fire({
             title: '¡Perfecto!',
             text: '¡Este usuario ya esta registrado!',
@@ -22,11 +22,11 @@ signupForm.addEventListener('submit', (e)=>{
     }
     Users.push({name:name, email:email, password:password})
     localStorage.setItem('users', JSON.stringify(Users))
-    Swal.fire({
+    Swal.fire({ 
         title: '¡Perfecto!',
         text: '¡Usuario registrado exitosamente!',
         icon: 'success',
         confirmButtonText: 'Continuar',
     });
-    window.location = "./login.html"
+    window.location = "./login.html" //Re dirijo a la pagina de inicio sesion 
 })
