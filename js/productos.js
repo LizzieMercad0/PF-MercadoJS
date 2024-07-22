@@ -15,7 +15,7 @@ const numerito = document.querySelector("#numerito")
 
 
 botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
+    aside.classList.remove("aside-visible")
 }))
 
 function cargarProductos(productosElegidos){
