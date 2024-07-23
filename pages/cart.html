@@ -65,31 +65,24 @@
     <h4 class="p-5 container">Carrito de compras</h4>
     
     <div class="container contenedor-carrito">
-        <p id="carrito-vacio" class="carrito-vacio"> 
-            Tu carrito está vacío. <i class="bi bi-emoji-frown"></i>
-        </p>
-        
-        <table class="table disabled">
-            <thead>
-                <tr>
-                    <th scope="col-sm-2">00000</th>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Subtotal</th>
-                </tr>
-            </thead>
-        </table>
-            <div class="carrito-productos" id="carrito-productos" class="carrito-producto disabled">
-                
+        <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+            <div id="carrito-productos" class="carrito-producto disabled">
+                <!-- <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col-sm-2">00000</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+            </table> -->
                 <!-- Esto se completara con JS -->
             </div>
-        
-
         <div class="row mx-2" id="carrito-acciones" class="carrito-acciones disabled">
             <div class="col justify-content-end carrito-acciones-izquierda">
                 <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar btn btn-danger"> Vaciar carrito </button> 
-                <!-- class="itemCartTotal">Total: $0 -->
             </div>
             <div class="col d-flex justify-content-end carrito-acciones-derecha">
                 <div class="carrito-acciones-total">
