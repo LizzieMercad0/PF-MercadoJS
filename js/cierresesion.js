@@ -12,7 +12,7 @@ botonCerrarSesion.addEventListener('click', () => {
         confirmButtonText: 'Confirmar',
     })
     .then(() => {
-        window.location = '../index.html'
+        window.location = 'index.html'
     
     })
 })
