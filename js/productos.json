@@ -8,7 +8,7 @@
             "nombre": "Bosque",
             "id": "bosque"
         },
-        "precio": 0.00
+        "precio": 1500
     },
     {
         "id": "hojas-01",
@@ -18,7 +18,7 @@
             "nombre": "Bosque",
             "id": "bosque"
         },
-        "precio": 1000
+        "precio": 1500
     },
     {
         "id": "cactus-01",
@@ -28,7 +28,7 @@
             "nombre": "Desierto",
             "id": "desierto"
         },
-        "precio": 0.00
+        "precio": 2500
     },
     {
         "id": "cactus-02",
@@ -38,7 +38,7 @@
             "nombre": "Desierto",
             "id": "desierto"
         },
-        "precio": 0.00
+        "precio": 3000
     },
     {
         "id": "rosario-01",
@@ -48,7 +48,7 @@
             "nombre": "Desierto",
             "id": "desierto"
         },
-        "precio": 0.00
+        "precio": 2500
     },
     {
         "id": "girasoles-01",
@@ -58,6 +58,6 @@
             "nombre": "Silvestre",
             "id": "silvestre"
         },
-        "precio": 0.00
+        "precio": 3000
     }
 ]
