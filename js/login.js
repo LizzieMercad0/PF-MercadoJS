@@ -15,6 +15,7 @@ loginForm.addEventListener('submit', (e) => {
         text: 'Usuario y/o contraseña incorrectos',
         icon: 'error',
         confirmButtonText: 'Reintentar',
+        confirmButtonColor: "#658354"
     })
 } else {
     Swal.fire({
@@ -22,6 +23,7 @@ loginForm.addEventListener('submit', (e) => {
         text: `Un gusto tenerte acá ${validUser.name}`,
         icon: 'success',
         confirmButtonText: 'Continuar',
+        confirmButtonColor: "#658354"
     }).then(() => {
         localStorage.setItem('sesionIniciada', 'true') // Almaceno la información
 

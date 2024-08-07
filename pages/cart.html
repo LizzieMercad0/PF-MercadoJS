@@ -42,15 +42,25 @@
                         </ul>
                     </div>
                 </div>
-                <li class="nav dropdown"> <!-------👇 PERFIL 👇--------->
+                <li class="nav dropdown" id="ocultarCarrito"> <!------- 👇 CARRITO 👇--------->
+                    <a class="nav-link boton-carrito" href="../pages/cart.html" id="messageDropdown" role="button" aria-expanded="false">
+                        <button type="button" class="btn btn-primary position-relative">
+                            <img src="../assets/image/carrito32x32.png" alt="Carrito de compras">
+                        <span id="numerito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                            0
+                        </span>
+                        </button>
+                    </a>
+                </li> <!-- -->
+                <li class="nav dropdown" id="perfilOcultar"> <!------- 👇 PERFIL 👇 --------->
                     <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/image/usuario.png" alt="">
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userProfileDropdown">
                         <a id="perfilOcultar" class="dropdown-item" href="../pages/profile.html"> <img src="../assets/image/usuario24.png" alt="">Información personal</a>
                         <a id="pagosOcultar" class="dropdown-item" href="#"> <img src="../assets/image/$24.png" alt=""> Mis pagos </a>
-                        <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html"> <img src="../assets/image/inicio24.png" alt=""> Iniciar sesion</a>
-                        <a id="cierreSesion" class="dropdown-item" href="#"> <img src="../assets/image/salida24.png" alt="">Cerrar sesión</a>
+                        <a id="inicioOcultar" class="dropdown-item" href="../pages/login.html">Iniciar Sesion</a>
+                        <a id="cierreSesion" class="dropdown-item" href="#"><img src="../assets/image/salida24.png" alt=""> Cerrar sesión</a>
                     </div>
                 </li> <!-- -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,6 +130,7 @@
     </nav>
 </footer>
 <!------------------------- 👆 FOOTER 👆 ------------------------------->
+<script src="../js/navbar.js"></script>
 <script src="../js/cart.js"></script>
 <script src="../js/cierresesion.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>

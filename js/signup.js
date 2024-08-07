@@ -16,6 +16,7 @@ signupForm.addEventListener('submit', (e)=>{
             text: '¡Este usuario ya esta registrado!',
             icon: 'success',
             confirmButtonText: 'Continuar',
+            confirmButtonColor: "#658354"
         }).then(() => {
             window.location = "./login.html"
         });
@@ -27,6 +28,7 @@ signupForm.addEventListener('submit', (e)=>{
         text: '¡Usuario registrado exitosamente!',
         icon: 'success',
         confirmButtonText: 'Continuar',
+        confirmButtonColor: "#658354"
     });
     window.location = "./login.html" //Re dirijo a la pagina de inicio sesion 
 })

@@ -21,6 +21,16 @@
         "precio": 1500
     },
     {
+        "id": "pothus-01",
+        "titulo": "Pothus",
+        "imagen": "../assets/image/bosque/pothus-inicio-tienda-3.jpg",
+        "categoria": {
+            "nombre": "Bosque",
+            "id": "bosque"
+        },
+        "precio": 3000
+    },
+    {
         "id": "cactus-01",
         "titulo": "Cactus con flores",
         "imagen": "../assets/image/desierto/cactus-producto-01.png",
@@ -59,5 +69,25 @@
             "id": "silvestre"
         },
         "precio": 3000
+    },
+    {
+        "id": "lirios-01",
+        "titulo": "Lirios",
+        "imagen": "../assets/image/silvestre/lirios-producto-02.jpg",
+        "categoria": {
+            "nombre": "Silvestre",
+            "id": "silvestre"
+        },
+        "precio": 3000
+    },
+    {
+        "id": "margarita-01",
+        "titulo": "Margarita",
+        "imagen": "../assets/image/silvestre/margaritas-producto-03.jpg",
+        "categoria": {
+            "nombre": "Silvestre",
+            "id": "silvestre"
+        },
+        "precio": 4500
     }
 ]

@@ -1,4 +1,4 @@
-//CODIGO NAVBAR
+//CODIGO NAVBAR 
 
 //Oculto elemento para que solo se muestren cuando quiero 
 const elementLi = document.querySelector('#ocultarTienda')

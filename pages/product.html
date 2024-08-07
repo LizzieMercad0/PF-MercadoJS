@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="../assets/image/tienda96.png" type="image/x-icon">
     <meta property="og:title" content="Tienda Online" />
 </head>
@@ -42,7 +42,7 @@
                         </ul>
                         </div>
                     </div>
-                    <li class="nav dropdown"> <!------- 👇 CARRITO 👇--------->
+                    <li class="nav dropdown" id="ocultarCarrito"> <!------- 👇 CARRITO 👇--------->
                         <a class="nav-link boton-carrito" href="../pages/cart.html" id="messageDropdown" role="button" aria-expanded="false">
                             <button type="button" class="btn btn-primary position-relative">
                                 <img src="../assets/image/carrito32x32.png" alt="Carrito de compras">
@@ -52,7 +52,7 @@
                             </button>
                         </a>
                     </li> <!-- -->
-                    <li class="nav dropdown"> <!------- 👇 PERFIL 👇 --------->
+                    <li class="nav dropdown" id="perfilOcultar"> <!------- 👇 PERFIL 👇 --------->
                         <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../assets/image/usuario.png" alt="">
                         </a>
@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../assets/image/bosque/pothus-inicio-tienda-3.jfif" class="d-block w-100" style= "height: 560px;" alt="...">
+            <img src="../assets/image/bosque/pothus-inicio-tienda-3.jpg" class="d-block w-100" style= "height: 560px;" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>La delicadeza </h5>
                 <p>En estos delicados aretes con forma de hojas. Cada detalle está cuidadosamente trabajado a mano.</p>
