@@ -15,7 +15,7 @@ if (localStorage.getItem('sesionIniciada') === 'true') {
         confirmButtonText: 'Continuar',
         confirmButtonColor: "#658354"
     }).then(() => { //dirijo el boton al login.html
-        window.location = "./pages/login.html"
+        window.location = "./login.html"
     });
 }
     })
