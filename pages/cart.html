@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="./css/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
@@ -51,7 +51,7 @@
                         </span>
                         </button>
                     </a>
-                </li> <!-- -->
+                </li> 
                 <li class="nav dropdown" id="perfilOcultar"> <!------- 👇 PERFIL 👇 --------->
                     <a href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../assets/image/usuario.png" alt="">
@@ -74,24 +74,26 @@
 <main>
     <h4 class="p-5 container">Carrito de compras</h4>
     
-    <div class="container contenedor-carrito">
-        <p id="carrito-vacio" class="carrito-vacio"> Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+    <div id="carrito-productos" class="container contenedor-carrito">
+        <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+
         <div id="carrito-productos" class="carrito-producto disabled">
             <!-- Esto se completara con JS -->
         </div>
+
         <div class="row mx-2" id="carrito-acciones" class="carrito-acciones disabled">
             <div class="col justify-content-end carrito-acciones-izquierda">
                 <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar btn btn-danger"> Vaciar carrito </button> 
             </div>
             <div class="col d-flex justify-content-end carrito-acciones-derecha">
                 <div class="carrito-acciones-total">
-                    <p>Total:
-                    </p><p id="total">$3000</p>
+                    <p class="p-5">Total:</p>
                 </div>
+                <p class="p-5" id="total">$3000</p>
                 <button id="carrito-acciones-comprar" class="carrito-acciones-comprar btn btn-primary">Comprar ahora</button>
             </div>
         </div>
-        <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+        <p id="carrito-comprado" class="carrito-comprado">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
     </div>
 </main>
 <!-------------------- 👆 DETALLE CARRITO 👆 --------------------------->

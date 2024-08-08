@@ -1,11 +1,12 @@
 // CODIGO CARRITO (CART.HTML)
 
-let productosEnCarrito = localStorage.getItem("productos-en-carrito");
+let productosEnCarrito = localStorage.getItem("productos-en-carrito")
 productosEnCarrito = JSON.parse(productosEnCarrito)
 
-const contenedorCarritoVacio = document.querySelector(".carrito-vacio")
+
+const contenedorCarritoVacio = document.querySelector("#carrito-vacio")
 const contenedorCarritoProductos = document.querySelector("#carrito-productos")
-const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
+const contenedorCarritoAcciones = document.querySelector("#carrito-acciones")
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado")
 let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar")
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar")
@@ -15,15 +16,15 @@ const botonComprar = document.querySelector("#carrito-acciones-comprar")
 function cargarProductosCarrito(){
     if (productosEnCarrito  && productosEnCarrito.length > 0){
 
-    contenedorCarritoVacio.classList.add("disabled");
-    contenedorCarritoProductos.classList.remove("disabled");
-    contenedorCarritoAcciones.classList.remove("disabled");
-    contenedorCarritoComprado.classList.add("disabled");
-
+        contenedorCarritoVacio.style.display = 'none'
+        contenedorCarritoProductos.style.display = 'block'
+        contenedorCarritoAcciones.style.display = 'block'
+        contenedorCarritoComprado.style.display = 'block'
     //Creo un div que se crea solo cuando añado productos al carrito 👇
     contenedorCarritoProductos.innerHTML = "" 
 
     productosEnCarrito.forEach(producto => {  
+
         const div = document.createElement("div")
         div.classList.add("carrito-producto")
         div.innerHTML=`
@@ -50,13 +51,12 @@ function cargarProductosCarrito(){
     actualizarTotal()
 
     } else{
-        contenedorCarritoVacio.classList.remove("disabled")
-        contenedorCarritoProductos.classList.add("disabled")
-        contenedorCarritoAcciones.classList.add("disabled")
-        contenedorCarritoComprado.classList.add("disabled")
+        contenedorCarritoVacio.style.display = 'block'
+        contenedorCarritoProductos.style.display = 'none'
+        contenedorCarritoAcciones.style.display = 'none'
+        contenedorCarritoComprado.style.display = 'none'
     }
 }
-
 cargarProductosCarrito()
 
 // Reasigno los botones 
@@ -71,7 +71,7 @@ function actualizarBotonesEliminar(){
 function eliminarDelCarrito(e){
     Toastify({
         text: "Producto eliminado",
-        duration: 3000,
+        duration: 1000,
         close: true,
         gravity: "top", 
         position: "right", 
@@ -92,12 +92,12 @@ function eliminarDelCarrito(e){
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton)
 
-    productosEnCarrito.splice(index,1)
+    productosEnCarrito.splice(index, 1)
     cargarProductosCarrito()
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
 }
+
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
@@ -130,9 +130,9 @@ function comprarCarrito() {
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     
-    contenedorCarritoVacio.classList.add("disabled");
-    contenedorCarritoProductos.classList.add("disabled");
-    contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCarritoComprado.classList.remove("disabled");
+    contenedorCarritoVacio.classList.add("disabled")
+    contenedorCarritoProductos.classList.add("disabled")
+    contenedorCarritoAcciones.classList.add("disabled")
+    contenedorCarritoComprado.classList.remove("disabled")
 
 }
