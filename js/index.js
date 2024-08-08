@@ -6,7 +6,7 @@ botonAñadir.forEach(boton =>{
     boton.addEventListener("click",(e) =>{
         // Verificar si el usuario está iniciado
 if (localStorage.getItem('sesionIniciada') === 'true') {
-    window.location = "../pages/product.html"
+    window.location = "./pages/product.html"
 } else {
     Swal.fire({     //llamo a SweetAlert2 desde el html
         title: '¿Desea iniciar sesión?',
@@ -15,7 +15,7 @@ if (localStorage.getItem('sesionIniciada') === 'true') {
         confirmButtonText: 'Continuar',
         confirmButtonColor: "#658354"
     }).then(() => { //dirijo el boton al login.html
-        window.location = "./login.html"
+        window.location = "./pages/login.html"
     });
 }
     })
